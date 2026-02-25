@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OMoon SMC PRO 3.0 🚀</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script src="libs/smc.js"></script>
+</head>
+<body>
+<header>
+  <h1>OMoon SMC PRO 3.0 🚀</h1>
+</header>
+
+<div class="container">
+  <div id="chart"></div>
+
+  <div class="panel">
+    <h2>SIGNAL CONTROL</h2>
+    <select id="tfSelect">
+      <option value="1min">M1</option>
+      <option value="3min">M3</option>
+      <option value="5min">M5</option>
+      <option value="15min" selected>M15</option>
+      <option value="30min">M30</option>
+      <option value="60min">H1</option>
+      <option value="240min">H4</option>
+      <option value="1day">D1</option>
+      <option value="1week">W1</option>
+      <option value="1month">MN</option>
+    </select>
+
+    <button onclick="runEngine()">GENERATE SIGNAL</button>
+
+    <div class="box">
+      <p>Swing High: <span id="sh"></span></p>
+      <p>Swing Low: <span id="slv"></span></p>
+      <p>Current Price: <span id="price"></span></p>
+      <p>Entry Zone: <span id="entry"></span></p>
+      <p>SL: <span id="slZone"></span></p>
+      <p>TP: <span id="tpZone"></span></p>
+      <p>RR Ratio: <span id="rr"></span></p>
+      <p>Bias: <span id="bias"></span></p>
+    </div>
+
+    <div id="signalBadge" class="signal">WAITING</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
